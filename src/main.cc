@@ -65,7 +65,7 @@ int main (int argc , char * argv[]){
 
             std::cout << out_path + "/" + file_name.substr(0, file_name.find(".casci"))<<"\n";
             
-            std::ofstream ofile ("a");
+            std::ofstream ofile (out_path + "/" + file_name.substr(0, file_name.find(".casci")));
             
             ofile << file;
         }
