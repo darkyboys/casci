@@ -1,3 +1,7 @@
+# This is the build file for the casci binary , Please compile this with magma build system from https://github.com/darkyboys/magma,
+ - Also Please Don't Make any changes unless you know what you are doing!
+ - For any bugs related to build report them to https://github.com/darkyboys/casci/issues;
+
 main (`src/main.cc`);
 out  (`casci`);
 bin  (`bin`);
