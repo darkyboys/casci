@@ -2,14 +2,8 @@ main (`src/main.cc`);
 out  (`casci`);
 bin  (`bin`);
 compiler (`g++`);
-exec_args (`e main.py 1234 .`);
-exec ();
+
 system (`clear`);
 system (`rm -rf bin`);
-
-make ();
-
-exec_args (`d main.py.casci 1234 bin`);
-exec ();
 
 make ();
