@@ -177,6 +177,8 @@ You must use the proper format to use CASCI!
 casci [option] [file name] [pattern] [optional but the destination to the file]
 ```
 
+*Note: If you just execute casci, Then it will show youu the version of casci*
+
 **e/encrypt - option**
 `e` or the `encrypt` option will encode/encrypt an entire file into the CASCI Format where the calendar will be made as per the given pattern! (Tip: Strong patterns = More Security).
 
