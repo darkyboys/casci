@@ -2,7 +2,7 @@
 A Secure encryption Algorithm which allows you to hardly encrypt and decrypt your files in a safer way, By using a unique machenism Known as "Calendar Integral Pushing", Which is this.
 
 ## CASCI - Calendar Integral Pushing Algorithm
-<img src='/home/gtg/Documents/programs/native/CASCI/img/algorithm.png'>
+<img src='img/algorithm.png'>
 
 Here You can see that the output with `Calendar Integral Pushing Algorithm` was,
 
