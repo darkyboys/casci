@@ -86,7 +86,7 @@ int main (){
 --- 
 
 **encrypt - method**
-`encrypt` method takes a `std::size_t` or `unsigned long long` as the pattern and then returns the encrypted/encoded format of the given data as a string.
+`encrypt` method takes a `std::string` as the pattern and then returns the encrypted/encoded format of the given data as a string.
 
 Example
 ```cpp
@@ -98,7 +98,7 @@ int main (){
     std::string data = "Hello!";
     CASCI myCasci = data;
 
-    std::size_t pattern = 21834831; // A Strong Pattern
+    std::string pattern = "21834831"; // A Strong Pattern
     std::cout <<myCasci.encrypt(pattern)<<'\n';
 
 }
@@ -113,7 +113,7 @@ Output
 
 
 **decrypt - method**
-`decrypt` method takes a `std::size_t` or `unsigned long long` as the pattern and then returns the decrypted/decoded format of the given encrypted/encoded data as a string.
+`decrypt` method takes a `std::string` as the pattern and then returns the decrypted/decoded format of the given encrypted/encoded data as a string.
 
 Example
 ```cpp
@@ -125,7 +125,7 @@ int main (){
     std::string data = "74 102 116 111 115 41 "; // Encoded/Encrypted String
     CASCI myCasci = data;
 
-    std::size_t pattern = 21834831; // A Strong Pattern
+    std::string pattern = "21834831"; // A Strong Pattern
     std::cout <<myCasci.decrypt(pattern)<<'\n';
 
 }

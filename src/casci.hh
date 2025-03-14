@@ -8,14 +8,14 @@
 */
 
 // Source
-#include <cstddef>
-#include <sstream>
 #ifndef CASCI_LIB
-#define CASCI_LIB 1
+#define CASCI_LIB 2
 
 // Std Cxx Stl
 #include <iostream>
 #include <string>
+#include <cstddef>
+#include <sstream>
 
 class CASCI {
     private:
@@ -23,11 +23,11 @@ class CASCI {
     public:
         CASCI (std::string value) : data (value ) {}
 
-        std::string encrypt (int pattern){
+        std::string encrypt (std::string pattern){
             std::string rval = "";
             std::stringstream data_stream (data);
             std::string temp, conv;
-            std::string pattern_str = std::to_string(pattern);
+            std::string pattern_str = pattern;
             std::size_t pattern_index = 0;
             
             while (std::getline (data_stream, temp)){
@@ -36,7 +36,7 @@ class CASCI {
                 for (std::size_t i = 0;i < temp.length();i++) {
                     // int pattern_number = 
                     conv += std::to_string(int (characters[i]) + 
-                        ((std::to_string(pattern)[pattern_index])-'0')
+                        (((pattern)[pattern_index])-'0')
                     ) + " ";
                     if (pattern_index == pattern_str.length()-1) pattern_index = 0;
                     else pattern_index += 1;
@@ -52,9 +52,9 @@ class CASCI {
             return rval;
         }
 
-        std::string decrypt (std::size_t pattern){
+        std::string decrypt (std::string pattern){
             std::string rval = "";
-            std::string pattern_str = std::to_string(pattern);
+            std::string pattern_str = pattern;
             std::size_t pattern_index = 0;
             std::string current_chars = "";
             std::string pattern_decoded;
