@@ -7,7 +7,7 @@
 
 int main (int argc , char * argv[]){
     std::string out_path = ".";
-    if (argc == 1) std::cout <<"CASCI 1.0\n", std::exit ( 3 );
+    if (argc == 1) std::cout <<"CASCI 2.0\n", std::exit ( 3 );
     if (argc == 3) std::cout <<"Error -> CASCI Need a pattern tooo!!!!\n", std::exit ( 3 );
     if (argc == 2) std::cout <<"Error -> CASCI Need a file name and a pattern tooo!!!!\n", std::exit ( 3 );
     if (argc == 4) out_path = argv[3], std::cout <<"'"<<out_path<<"'\n";
@@ -32,7 +32,7 @@ int main (int argc , char * argv[]){
             
             CASCI make = ecc;
             
-            file += make.encrypt(std::stoi (std::string (argv[3])));
+            file += make.encrypt((std::string (argv[3])));
 
             
             
@@ -61,7 +61,7 @@ int main (int argc , char * argv[]){
             
             CASCI make = ecc;
             
-            file += make.decrypt(std::stoi (std::string (argv[3])));
+            file += make.decrypt((std::string (argv[3])));
 
             std::cout << out_path + "/" + file_name.substr(0, file_name.find(".casci"))<<"\n";
             
