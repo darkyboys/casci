@@ -8,6 +8,6 @@ bin  (`bin`);
 compiler (`g++`);
 
 system (`clear`);
-system (`rm -rf bin`);
+# system (`rm -rf bin`);
 
 make ();
