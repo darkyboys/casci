@@ -205,6 +205,13 @@ The given command is aiming to decrypt/decode a casci file into from the CASCI F
 
 ---
 
+## CASCI V2
+`CASCI V2` is a newer version of CASCI Supporting mainly total of 62 characters itself from `a - A - 9` but it can support any ASCII Character in the pattern , But it's recommended to use `a - A - 9` characters for memorable patterns as weird ASCII values might be forgotten in human brain.
+
+The API is similar just the `CASCI` was renamed to `CASCIV2` and for technical correctness in the `v2` , `encrypt` was renamed to `encode` and `decrypt` was renamed to `decode`. And the algorithm itself is so much safer now , If `CASCI` was unbrekable then `CASCIV2` is impossible because in the `CASCIV2` every character except for `0 - 9` is converted into there `ASCII` values making the pattern for `CASCI` but `0 - 9` was put exactly `0 - 9` in the CASCI pattern output means in output it's impossible to tell weather it's `CASCIV2` or `CASCI` and if it's `v2` then is this incremented by a number or an `ASCII` digit.
+
+ > The library header is `casciv2.hh`
+
 ## Want To Contribute ?
 `CASCI` Project is under the `MIT License` which is why you can feel free to CONTRIBUTE!
 Just make sure to checkout the [LICENSE TERMS](LICENSE) and [Contribution Guidelines](CONTRIBUTING.md).
