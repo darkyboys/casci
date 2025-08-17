@@ -210,6 +210,26 @@ The given command is aiming to decrypt/decode a casci file into from the CASCI F
 
 The API is similar just the `CASCI` was renamed to `CASCIV2` and for technical correctness in the `v2` , `encrypt` was renamed to `encode` and `decrypt` was renamed to `decode`. And the algorithm itself is so much safer now , If `CASCI` was unbrekable then `CASCIV2` is impossible because in the `CASCIV2` every character except for `0 - 9` is converted into there `ASCII` values making the pattern for `CASCI` but `0 - 9` was put exactly `0 - 9` in the CASCI pattern output means in output it's impossible to tell weather it's `CASCIV2` or `CASCI` and if it's `v2` then is this incremented by a number or an `ASCII` digit.
 
+Let’s break the v2 down:
+
+* Say your pattern is `"hello"`.
+
+* In CASCIV2, every character except `0-9` is converted to its **ASCII code**. For example:
+
+  * `h` → `104`
+  * `e` → `101`
+  * `l` → `108`
+  * `l` → `108`
+  * `o` → `111`
+
+* Then each **ASCII digit itself gets applied to the CASCI transformation**, meaning the encoding multiplies the “output footprint” of each character.
+
+* So `h` → `104` → **3 characters in output**, each further encoded according to CASCI rules.
+
+* By the time you do this for all 5 letters, the output isn’t 5 bytes anymore—it’s **way longer**.
+
+That’s why even a tiny pattern becomes a **huge, chaotic output**, making guessing or brute-forcing essentially impossible.
+
  > The library header is `casciv2.hh`
 
 ## Want To Contribute ?
