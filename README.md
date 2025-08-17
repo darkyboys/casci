@@ -228,6 +228,8 @@ Let’s break the v2 down:
 
 * By the time you do this for all 5 letters, the output isn’t 5 bytes anymore—it’s **way longer**.
 
+* Then the second thing will happen where the pattern won't contain any spaces and each character of pattern will be increment to the content's character making it impossible to reverse engineer it.
+
 That’s why even a tiny pattern becomes a **huge, chaotic output**, making guessing or brute-forcing essentially impossible.
 
  > The library header is `casciv2.hh`
